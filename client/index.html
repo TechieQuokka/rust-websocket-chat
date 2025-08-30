@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦀 Rust Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦀 Rust Chat Room</h1>
+            <div class="connection-status" id="status">🔴 Disconnected</div>
+        </div>
+        
+        <div class="join-form" id="joinForm">
+            <div class="form-group">
+                <label for="usernameInput">Username</label>
+                <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="50" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label for="roomInput">Room Name</label>
+                <input type="text" id="roomInput" placeholder="Room name" value="general" maxlength="50">
+            </div>
+            <button onclick="joinRoom()" class="primary-btn">Join Chat Room</button>
+        </div>
+
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-header">
+                <h2 id="roomTitle">Room: general</h2>
+                <div class="room-info">
+                    <span id="userCount">0 users</span>
+                </div>
+            </div>
+
+            <div class="users-list" id="usersSection">
+                <h3>👥 Active Users</h3>
+                <div class="users-grid" id="usersList"></div>
+            </div>
+
+            <div class="chat-messages" id="messages"></div>
+            
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Type your message..." maxlength="1000">
+                <button onclick="sendMessage()" class="send-btn">Send</button>
+                <button onclick="leaveRoom()" class="leave-btn">Leave</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[package]
+name = "communication-project"
+version = "0.1.0"
+edition = "2021"
+description = "A lightweight real-time chat application built with Rust"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+repository = "https://github.com/yourusername/communication-project"
+keywords = ["websocket", "chat", "real-time", "tokio", "async"]
+categories = ["network-programming", "web-programming::websocket"]
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+tokio-tungstenite = "0.21"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+uuid = { version = "1.6", features = ["v4"] }
+dashmap = "5.5"
+config = "0.14"
+anyhow = "1.0"
+futures-util = "0.3"
+hyper = { version = "0.14", features = ["full"] }
+hyper-tungstenite = "0.11"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[[bin]]
+name = "chat-server"
+path = "src/main.rs"
