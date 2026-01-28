@@ -45,8 +45,8 @@ A high-performance, lightweight real-time chat application built with Rust, focu
 
 1. **Clone the repository**:
 ```bash
-git clone <repository-url>
-cd communication-project
+git clone https://github.com/TechieQuokka/rust-websocket-chat.git
+cd rust-websocket-chat
 ```
 
 2. **Build the project**:
@@ -95,7 +95,7 @@ python -m http.server 8000
 ## 📊 Performance Targets
 
 | Metric | Target | Status |
-|--------|--------|---------|
+|--------|--------|--------|
 | Connection Setup | < 10ms | ✅ |
 | Message Latency | < 5ms | ✅ |
 | Concurrent Users | 10,000+ | 🎯 |
